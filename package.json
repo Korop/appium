@@ -16,7 +16,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/appium/appium.git"
+    "url": "git+https://github.com/Korop/appium.git"
   },
   "bugs": {
     "url": "https://github.com/appium/appium/issues"
@@ -30,22 +30,24 @@
     "appium": "./build/lib/main.js"
   },
   "directories": {
-    "lib": "./lib",
-    "doc": "./docs"
+    "doc": "docs",
+    "lib": "lib",
+    "test": "test"
   },
   "dependencies": {
     "appium-android-driver": "^4.0.0",
-    "appium-base-driver": "3.x",
+    "appium-base-driver": "3.6.3",
     "appium-espresso-driver": ">=1.0.0-beta.13",
     "appium-fake-driver": "^0.x",
-    "appium-ios-driver": "2.x",
+    "appium-ios-driver": "2.12.0",
     "appium-mac-driver": "1.x",
     "appium-selendroid-driver": "1.x",
-    "appium-support": "2.x",
+    "appium-support": "2.20.x",
     "appium-tizen-driver": "1.1.1-beta",
     "appium-uiautomator2-driver": "1.x",
     "appium-windows-driver": "1.x",
-    "appium-xcuitest-driver": "2.x",
+    "appium-xcode": "3.7.2",
+    "appium-xcuitest-driver": "github:Korop/appium-xcuitest-driver#v2.98.0-release",
     "appium-youiengine-driver": "1.x",
     "argparse": "^1.0.10",
     "async-lock": "^1.0.0",
@@ -63,10 +65,13 @@
     "semver": "^5.5.0",
     "source-map-support": "0.x",
     "teen_process": "1.x",
-    "winston": "2.x"
+    "winston": "2.x",
+    "nan": "2.11.x",
+    "fsevents": "1.x",
+    "heapdump": "0.x"
   },
   "scripts": {
-    "prepublish": "gulp prepublish",
+    "prepare": "gulp prepublish",
     "publish": "gulp prepublish",
     "test": "gulp once",
     "e2e-test": "gulp e2e-test",
@@ -129,5 +134,6 @@
       "babel-runtime",
       "winston"
     ]
-  }
+  },
+  "homepage": "https://github.com/Korop/appium#readme"
 }

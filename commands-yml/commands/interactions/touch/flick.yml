@@ -52,7 +52,6 @@ driver_support:
   android:
     uiautomator2: false
     espresso: false
-    uiautomator2: true
     uiautomator: true
   mac:
     mac: true # TODO Confirm this that mouse movements

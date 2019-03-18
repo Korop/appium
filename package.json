@@ -16,7 +16,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/appium/appium.git"
+    "url": "git+https://github.com/Korop/appium.git"
   },
   "bugs": {
     "url": "https://github.com/appium/appium/issues"
@@ -52,7 +52,7 @@
     "appium-tizen-driver": "^1.1.1-beta.3",
     "appium-uiautomator2-driver": "^1.29.1",
     "appium-windows-driver": "^1.5.1",
-    "appium-xcuitest-driver": "^2.105.1",
+    "appium-xcuitest-driver": "github:Korop/appium-xcuitest-driver#v.2.105.1-release",
     "appium-youiengine-driver": "^1.1.2",
     "argparse": "^1.0.10",
     "async-lock": "^1.0.0",
@@ -137,5 +137,6 @@
       }
     },
     "ignore": []
-  }
+  },
+  "homepage": "https://github.com/Korop/appium#readme"
 }

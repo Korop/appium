@@ -16,7 +16,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/appium/appium.git"
+    "url": "git+https://github.com/Korop/appium.git"
   },
   "bugs": {
     "url": "https://github.com/appium/appium/issues"
@@ -46,14 +46,15 @@
     "appium-base-driver": "3.x",
     "appium-espresso-driver": "^1.0.0",
     "appium-fake-driver": "^0.x",
-    "appium-ios-driver": "4.x",
+    "appium-ios-driver": "github:Korop/appium-ios-driver#release-v4.3.0",
     "appium-mac-driver": "1.x",
+    "appium-remote-debugger": "^4.4.1",
     "appium-selendroid-driver": "1.x",
     "appium-support": "2.x",
     "appium-tizen-driver": "^1.1.1-beta.3",
     "appium-uiautomator2-driver": "1.x",
     "appium-windows-driver": "1.x",
-    "appium-xcuitest-driver": "^2.116.3",
+    "appium-xcuitest-driver": "github:Korop/appium-xcuitest-driver#v2.116.3-release",
     "appium-youiengine-driver": "^1.2.0",
     "argparse": "^1.0.10",
     "async-lock": "^1.0.0",
@@ -74,8 +75,8 @@
     "word-wrap": "^1.2.3"
   },
   "scripts": {
-    "clean": "rm -rf node_modules && rm -f package-lock.json && npm install",
-    "prepublish": "gulp prepublish",
+    "clean": "rm -rf node_modules && rm -f package-lock.json && npm install && npm run build",
+    "prepare": "gulp prepublish",
     "prepublishOnly": "npm run prune-shrinkwrap && gulp fixShrinkwrap",
     "postpublish": "npm run restore-shrinkwrap",
     "prune-shrinkwrap": "!(test -e npm-shrinkwrap.json) || (npm ci --production --ignore-scripts && npm shrinkwrap && npm install --only=dev --no-shrinkwrap)",
@@ -119,5 +120,6 @@
   },
   "optionalDependencies": {
     "fsevents": "2.x"
-  }
+  },
+  "homepage": "https://github.com/Korop/appium#readme"
 }
